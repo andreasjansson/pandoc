@@ -1264,6 +1264,8 @@ inlineCommands = M.fromList $
   , ("it", extractSpaces emph <$> inlines)
   , ("sl", extractSpaces emph <$> inlines)
   , ("bf", extractSpaces strong <$> inlines)
+  , ("sf", extractSpaces (spanWith ("",["sans-serif"],[])) <$> tok)
+  , ("sc", extractSpaces smallcaps <$> tok)
   , ("rm", inlines)
   , ("itshape", extractSpaces emph <$> inlines)
   , ("slshape", extractSpaces emph <$> inlines)

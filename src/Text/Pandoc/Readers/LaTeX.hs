@@ -2009,6 +2009,7 @@ environments = M.fromList
           skipopts *> spaces *> optional braced *> spaces *> blocks)
    , ("figure", env "figure" $ skipopts *> figure)
    , ("figure*", env "figure*" $ skipopts *> figure)
+   , ("wrapfigure", env "wrapfigure" $ skipopts *> braced *> skipopts *> braced *> figure)
    , ("subfigure", env "subfigure" $ skipopts *> tok *> figure)
    , ("center", env "center" blocks)
    , ("longtable",  env "longtable" $

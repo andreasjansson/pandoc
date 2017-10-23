@@ -2084,6 +2084,9 @@ environments = M.fromList
    -- cjk
    , ("CJK", env "CJK" $ braced *> braced *> blocks)
    , ("CJK*", env "CJK*" $ braced *> braced *> blocks)
+
+   -- HACK(bfirsh): http://localhost:8010/html/1303.3997/
+   , ("methods", env "methods" blocks)
    ]
 
 environment :: PandocMonad m => LP m Blocks
